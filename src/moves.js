@@ -29,3 +29,10 @@ function mergeRight(row) {
 
     return row
 }
+
+function moveRight(matrix) {
+    for (let i = 0; i < matrix.length; i++)
+        matrix[i] = mergeRight(matrix[i])
+
+    display(matrix)
+}
