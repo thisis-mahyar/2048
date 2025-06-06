@@ -1,4 +1,6 @@
 let grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+let pre = []
+let flag = false
 
 let tileColors = {
     2: '#FF6B6B',
