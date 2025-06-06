@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: Calibri, serif;
+    color: #2E2E2E;
 }
 
 header {
@@ -37,13 +38,13 @@ nav {
 }
 
 img {
-    background-color: black;
+    background-color: #2E2E2E;
     padding: 6px;
     border-radius: 15px;
 }
 
 table {
-    border: black solid 1px;
+    border: #2E2E2E solid 1px;
     border-radius: 15px;
     width: 400px;
     height: 400px;
@@ -52,7 +53,7 @@ table {
 
 td {
     border-radius: 15px;
-    background-color: lightgray;
+    background-color: #ECECEC;
     font-size: 28px;
     text-align: center;
     height: 25%;
