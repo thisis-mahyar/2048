@@ -18,10 +18,3 @@ function newNum(arr) {
     const dice = Math.floor(Math.random() * 6)
     arr[randI][randJ] = dice === 1 ? 4 : 2
 }
-
-function init(arr) {
-    newNum(arr)
-    display(arr)
-}
-
-init(grid)
