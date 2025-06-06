@@ -25,4 +25,10 @@ function handleKeydown(e) {
             moveDown(grid)
             break
     }
+
+    if (didWin(grid)) {
+        document.querySelector('.game-state').style.display = 'block'
+        document.querySelector('.game-state').textContent = 'You win!'
+        window.removeEventListener('keydown', handleKeydown)
+    }
 }
