@@ -1,4 +1,4 @@
-let grid = [[0, 0, 0, 0], [0, 4, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+let grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 
 function display(arr) {
     for (let i = 0; i < arr.length; i++) {
@@ -10,4 +10,9 @@ function display(arr) {
     }
 }
 
-display(grid)
+function newNum(arr) {
+    let randI = Math.floor(Math.random() * arr.length);
+    let randJ = Math.floor(Math.random() * arr[randI].length);
+
+    arr[randI][randJ] = 2
+}
