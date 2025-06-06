@@ -14,7 +14,9 @@ function newNum(arr) {
     let randI = Math.floor(Math.random() * arr.length);
     let randJ = Math.floor(Math.random() * arr[randI].length);
 
-    arr[randI][randJ] = 2
+    // there's a %17 chance that 4 gets generated
+    const dice = Math.floor(Math.random() * 6)
+    arr[randI][randJ] = dice === 1 ? 4 : 2
 }
 
 function init(arr) {
