@@ -30,6 +30,14 @@ function mergeRight(row) {
     return row
 }
 
+function mergeLeft(row) {
+    row = row.reverse()
+    row = mergeRight(row)
+    row = row.reverse()
+
+    return row
+}
+
 function moveRight(matrix) {
     for (let i = 0; i < matrix.length; i++)
         matrix[i] = mergeRight(matrix[i])
