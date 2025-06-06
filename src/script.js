@@ -16,3 +16,10 @@ function newNum(arr) {
 
     arr[randI][randJ] = 2
 }
+
+function init(arr) {
+    newNum(arr)
+    display(arr)
+}
+
+init(grid)
