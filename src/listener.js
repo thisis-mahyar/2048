@@ -3,7 +3,7 @@ window.addEventListener('load', init)
 window.addEventListener('keydown', handleKeydown)
 
 function init() {
-    newNum(grid)
+    createNewTile(grid)
     display(grid)
 }
 

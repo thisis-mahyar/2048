@@ -42,6 +42,7 @@ function moveRight(matrix) {
     for (let i = 0; i < matrix.length; i++)
         matrix[i] = mergeRight(matrix[i])
 
+    createNewTile(matrix)
     display(matrix)
 }
 
@@ -50,6 +51,7 @@ function moveLeft(matrix) {
     for (let i = 0; i < matrix.length; i++)
         matrix[i] = mergeLeft(matrix[i])
 
+    createNewTile(matrix)
     display(matrix)
 }
 
@@ -63,6 +65,7 @@ function moveUp(matrix) {
             matrix[j][i] = column[j]
     }
 
+    createNewTile(matrix)
     display(matrix)
 }
 
@@ -76,5 +79,6 @@ function moveDown(matrix) {
             matrix[j][i] = column[j]
     }
 
+    createNewTile(matrix)
     display(matrix)
 }
