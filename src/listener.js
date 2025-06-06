@@ -10,19 +10,19 @@ function init() {
 function handleKeydown(e) {
     switch (e.key) {
         case 'ArrowRight':
-            moveRight()
+            moveRight(grid)
             break
 
         case 'ArrowLeft':
-            moveLeft()
+            moveLeft(grid)
             break
 
         case 'ArrowUp':
-            moveUp()
+            moveUp(grid)
             break
 
         case 'ArrowDown':
-            moveDown()
+            moveDown(grid)
             break
     }
 }
