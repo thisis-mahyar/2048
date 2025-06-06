@@ -52,3 +52,29 @@ function moveLeft(matrix) {
 
     display(matrix)
 }
+
+function moveUp(matrix) {
+    for (let i = 0; i < matrix.length; i++) {
+        let column = [matrix[0][i], matrix[1][i], matrix[2][i], matrix[3][i]]
+
+        column = mergeLeft(column)
+
+        for (let j = 0; j < matrix[i].length; j++)
+            matrix[j][i] = column[j]
+    }
+
+    display(matrix)
+}
+
+function moveDown(matrix) {
+    for (let i = 0; i < matrix.length; i++) {
+        let column = [matrix[0][i], matrix[1][i], matrix[2][i], matrix[3][i]]
+
+        column = mergeRight(column)
+
+        for (let j = 0; j < matrix[i].length; j++)
+            matrix[j][i] = column[j]
+    }
+
+    display(matrix)
+}
