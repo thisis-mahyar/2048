@@ -31,4 +31,10 @@ function handleKeydown(e) {
         document.querySelector('.game-state').textContent = 'You win!'
         window.removeEventListener('keydown', handleKeydown)
     }
+
+    if (didLose(grid)) {
+        document.querySelector('.game-state').style.display = 'block'
+        document.querySelector('.game-state').textContent = 'You lose!'
+        window.removeEventListener('keydown', handleKeydown)
+    }
 }
