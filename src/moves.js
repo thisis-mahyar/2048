@@ -31,9 +31,9 @@ function mergeRight(row) {
 }
 
 function mergeLeft(row) {
-    row = row.reverse()
+    row.reverse()
     row = mergeRight(row)
-    row = row.reverse()
+    row.reverse()
 
     return row
 }

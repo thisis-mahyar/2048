@@ -1,6 +1,6 @@
 let grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 let pre = []
-let flag = false
+let canUndo = false
 
 let tileColors = {
     2: '#FF6B6B',
@@ -23,7 +23,7 @@ function display(matrix) {
         for (let j = 0; j < matrix[i].length; j++) {
             document.querySelector(`.r${i} .c${j}`).textContent = matrix[i][j] === 0 ? '' : matrix[i][j]
             document.querySelector(`.r${i} .c${j}`).style.color = 'white'
-            document.querySelector(`.r${i} .c${j}`).style.backgroundColor = matrix[i][j] === 0 ? '#ECECEC' : tileColors[grid[i][j]]
+            document.querySelector(`.r${i} .c${j}`).style.backgroundColor = matrix[i][j] === 0 ? '#ECECEC' : tileColors[matrix[i][j]]
         }
     }
 }
