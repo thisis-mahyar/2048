@@ -39,7 +39,7 @@ function mergeLeft(row) {
 }
 
 function moveRight(matrix) {
-    pre = matrix.slice()
+    updatePre(matrix)
 
     for (let i = 0; i < matrix.length; i++)
         matrix[i] = mergeRight(matrix[i])
@@ -49,7 +49,7 @@ function moveRight(matrix) {
 }
 
 function moveLeft(matrix) {
-    pre = matrix.slice()
+    updatePre(matrix)
 
     for (let i = 0; i < matrix.length; i++)
         matrix[i] = mergeLeft(matrix[i])
@@ -59,7 +59,7 @@ function moveLeft(matrix) {
 }
 
 function moveUp(matrix) {
-    pre = matrix.slice()
+    updatePre(matrix)
 
     for (let i = 0; i < matrix.length; i++) {
         let column = [matrix[0][i], matrix[1][i], matrix[2][i], matrix[3][i]]
@@ -75,7 +75,7 @@ function moveUp(matrix) {
 }
 
 function moveDown(matrix) {
-    pre = matrix.slice()
+    updatePre(matrix)
 
     for (let i = 0; i < matrix.length; i++) {
         let column = [matrix[0][i], matrix[1][i], matrix[2][i], matrix[3][i]]
