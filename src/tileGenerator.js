@@ -28,4 +28,6 @@ function createNewTile(matrix) {
     // there's a %17 chance that 4 gets generated
     const dice = Math.floor(Math.random() * 6)
     matrix[emptyTile.i][emptyTile.j] = dice === 1 ? 4 : 2
+
+    canUndo = true
 }
