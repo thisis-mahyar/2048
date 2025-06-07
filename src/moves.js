@@ -18,6 +18,10 @@ function mergeRight(row) {
         if (row[i] === row[i - 1]) {
             row[i] *= 2
             row[i - 1] = 0
+
+            // update score
+            score += row[i]
+
             // skip the next element to avoid double merging
             i--
         }

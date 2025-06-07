@@ -1,6 +1,7 @@
 let grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 let pre = []
 let canUndo = false
+let score = 0
 
 let tileColors = {
     2: '#FF6B6B',
@@ -26,4 +27,6 @@ function display(matrix) {
             document.querySelector(`.r${i} .c${j}`).style.backgroundColor = matrix[i][j] === 0 ? '#ECECEC' : tileColors[matrix[i][j]]
         }
     }
+
+    document.querySelector('.score-val').innerHTML = score
 }
