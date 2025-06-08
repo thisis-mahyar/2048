@@ -1,3 +1,5 @@
+'use strict'
+
 // two approaches to choose a random tile among empty tiles
 // 1. choose a random tile, if it is empty, create a new number there
 // 2. store all the empty tiles in an array, choose a random one and create a new number in it

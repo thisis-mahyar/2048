@@ -1,3 +1,5 @@
+'use strict'
+
 let pre = []
 
 function updatePre(matrix) {

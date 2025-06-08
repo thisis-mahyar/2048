@@ -1,3 +1,5 @@
+'use strict'
+
 let tiles = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 let score = 0
 let tileColors = {

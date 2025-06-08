@@ -1,3 +1,5 @@
+'use strict'
+
 // [0, 2, 8, 0] => [0, 0, 2, 8]
 function shiftRight(row) {
     let nonZeroItems = row.filter(x => x !== 0)

@@ -1,3 +1,5 @@
+'use strict'
+
 function moveRight(matrix) {
     updatePre(matrix)
 

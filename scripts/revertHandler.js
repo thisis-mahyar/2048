@@ -1,3 +1,5 @@
+'use strict'
+
 let canRevert = false
 
 function revertHandler(matrix) {
