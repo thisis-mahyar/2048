@@ -25,41 +25,39 @@
 </header>
 <nav>
     <div class="left-icons">
-        <img class="home-icon" src="../icons/home.svg" alt="home">
+        <img class="home-icon" src="assets/icons/home.svg" alt="home">
     </div>
     <div class="right-icons">
-        <img class="return-icon" src="../icons/return.svg" alt="return" onclick="undo(grid)">
-        <img class="refresh-icon" src="../icons/refresh.svg" alt="refresh" onclick="refresh(grid)">
+        <img class="revert-icon" src="assets/icons/revert.svg" alt="revert" onclick="revertHandler(tiles)">
+        <img class="refresh-icon" src="assets/icons/refresh.svg" alt="refresh" onclick="refreshHandler(tiles)">
     </div>
 </nav>
-<main>
-    <table>
-        <tr class="r0">
-            <td class="c0"></td>
-            <td class="c1"></td>
-            <td class="c2"></td>
-            <td class="c3"></td>
-        </tr>
-        <tr class="r1">
-            <td class="c0"></td>
-            <td class="c1"></td>
-            <td class="c2"></td>
-            <td class="c3"></td>
-        </tr>
-        <tr class="r2">
-            <td class="c0"></td>
-            <td class="c1"></td>
-            <td class="c2"></td>
-            <td class="c3"></td>
-        </tr>
-        <tr class="r3">
-            <td class="c0"></td>
-            <td class="c1"></td>
-            <td class="c2"></td>
-            <td class="c3"></td>
-        </tr>
-    </table>
-</main>
+<table>
+    <tr class="r0">
+        <td class="c0"></td>
+        <td class="c1"></td>
+        <td class="c2"></td>
+        <td class="c3"></td>
+    </tr>
+    <tr class="r1">
+        <td class="c0"></td>
+        <td class="c1"></td>
+        <td class="c2"></td>
+        <td class="c3"></td>
+    </tr>
+    <tr class="r2">
+        <td class="c0"></td>
+        <td class="c1"></td>
+        <td class="c2"></td>
+        <td class="c3"></td>
+    </tr>
+    <tr class="r3">
+        <td class="c0"></td>
+        <td class="c1"></td>
+        <td class="c2"></td>
+        <td class="c3"></td>
+    </tr>
+</table>
 <div class="game-state"></div>
 <script src="scripts/index.js"></script>
 <script src="scripts/displayGame.js"></script>
