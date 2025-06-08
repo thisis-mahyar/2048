@@ -1,8 +1,8 @@
 'use strict'
 
-let tiles = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+const tiles = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 let score = 0
-let tileColors = {
+const tileColors = {
     2: '#FF6B6B',
     4: '#FFD93D',
     8: '#6BCB77',

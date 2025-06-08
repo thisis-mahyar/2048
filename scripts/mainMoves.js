@@ -3,8 +3,9 @@
 function moveRight(matrix) {
     updatePre(matrix)
 
-    for (let i = 0; i < matrix.length; i++)
+    for (let i = 0; i < matrix.length; i++) {
         matrix[i] = mergeRight(matrix[i])
+    }
 
     createNewTile(matrix)
     display(matrix)
@@ -13,8 +14,9 @@ function moveRight(matrix) {
 function moveLeft(matrix) {
     updatePre(matrix)
 
-    for (let i = 0; i < matrix.length; i++)
+    for (let i = 0; i < matrix.length; i++) {
         matrix[i] = mergeLeft(matrix[i])
+    }
 
     createNewTile(matrix)
     display(matrix)
@@ -28,8 +30,9 @@ function moveUp(matrix) {
 
         column = mergeLeft(column)
 
-        for (let j = 0; j < matrix[i].length; j++)
+        for (let j = 0; j < matrix[i].length; j++)  {
             matrix[j][i] = column[j]
+        }
     }
 
     createNewTile(matrix)
@@ -44,8 +47,9 @@ function moveDown(matrix) {
 
         column = mergeRight(column)
 
-        for (let j = 0; j < matrix[i].length; j++)
+        for (let j = 0; j < matrix[i].length; j++) {
             matrix[j][i] = column[j]
+        }
     }
 
     createNewTile(matrix)

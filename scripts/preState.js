@@ -3,8 +3,9 @@
 let pre = []
 
 function updatePre(matrix) {
-    if (pre.length === 0)
+    if (pre.length === 0) {
         pre = [[], [], [], []]
+    }
 
     if (pre.length === 0 || pre.toString() !== matrix.toString()) {
         for (let i = 0; i < matrix.length; i++) {
