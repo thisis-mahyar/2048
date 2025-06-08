@@ -1,8 +1,5 @@
-let grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
-let pre = []
-let canUndo = false
+let tiles = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 let score = 0
-
 let tileColors = {
     2: '#FF6B6B',
     4: '#FFD93D',
@@ -20,6 +17,11 @@ let tileColors = {
 }
 
 function display(matrix) {
+    displayTiles(matrix)
+    displayScore()
+}
+
+function displayTiles(matrix) {
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[i].length; j++) {
             document.querySelector(`.r${i} .c${j}`).textContent = matrix[i][j] === 0 ? '' : matrix[i][j]
@@ -27,6 +29,8 @@ function display(matrix) {
             document.querySelector(`.r${i} .c${j}`).style.backgroundColor = matrix[i][j] === 0 ? '#ECECEC' : tileColors[matrix[i][j]]
         }
     }
+}
 
-    document.querySelector('.score-val').innerHTML = score
+function displayScore() {
+    document.querySelector('.score-val').innerHTML = score.toString()
 }
