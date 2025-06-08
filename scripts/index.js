@@ -1,8 +1,8 @@
 'use strict'
 
 // only when the page loads, init the game
-window.addEventListener('load', init)
-window.addEventListener('keydown', handleKeydown)
+document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('keydown', handleKeydown)
 
 function init() {
     createNewTile(tiles)
