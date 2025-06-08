@@ -25,13 +25,13 @@ function moveLeft(matrix) {
 function moveUp(matrix) {
     updatePre(matrix)
 
-    for (let i = 0; i < matrix.length; i++) {
-        let column = [matrix[0][i], matrix[1][i], matrix[2][i], matrix[3][i]]
+    for (let col = 0; col < matrix.length; col++) {
+        let column = [matrix[0][col], matrix[1][col], matrix[2][col], matrix[3][col]]
 
         column = mergeLeft(column)
 
-        for (let j = 0; j < matrix[i].length; j++)  {
-            matrix[j][i] = column[j]
+        for (let row = 0; row < matrix[col].length; row++)  {
+            matrix[row][col] = column[row]
         }
     }
 
@@ -42,13 +42,13 @@ function moveUp(matrix) {
 function moveDown(matrix) {
     updatePre(matrix)
 
-    for (let i = 0; i < matrix.length; i++) {
-        let column = [matrix[0][i], matrix[1][i], matrix[2][i], matrix[3][i]]
+    for (let col = 0; col < matrix.length; col++) {
+        let column = [matrix[0][col], matrix[1][col], matrix[2][col], matrix[3][col]]
 
         column = mergeRight(column)
 
-        for (let j = 0; j < matrix[i].length; j++) {
-            matrix[j][i] = column[j]
+        for (let row = 0; row < matrix[col].length; row++) {
+            matrix[row][col] = column[row]
         }
     }
 

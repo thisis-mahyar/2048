@@ -9,10 +9,10 @@ function getEmptyTiles(matrix) {
     // I decided not to declare a global emptyTiles and keep it in function scopes
     let emptyTiles = []
 
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
-            if (matrix[i][j] === 0)
-                emptyTiles.push({i, j})
+    for (let row = 0; row < matrix.length; row++) {
+        for (let col = 0; col < matrix[row].length; col++) {
+            if (matrix[row][col] === 0)
+                emptyTiles.push({row: row, col: col})
         }
     }
 
@@ -29,7 +29,7 @@ function createNewTile(matrix) {
 
         // there's a %17 chance that 4 gets generated
         const dice = Math.floor(Math.random() * 6)
-        matrix[emptyTile.i][emptyTile.j] = dice === 1 ? 4 : 2
+        matrix[emptyTile.row][emptyTile.col] = dice === 1 ? 4 : 2
 
         canRevert = true
     }

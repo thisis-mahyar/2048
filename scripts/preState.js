@@ -8,9 +8,9 @@ function updatePre(matrix) {
     }
 
     if (pre.length === 0 || pre.toString() !== matrix.toString()) {
-        for (let i = 0; i < matrix.length; i++) {
-            for (let j = 0; j < matrix[i].length; j++) {
-                pre[i][j] = matrix[i][j]
+        for (let row = 0; row < matrix.length; row++) {
+            for (let col = 0; col < matrix[row].length; col++) {
+                pre[row][col] = matrix[row][col]
             }
         }
     }

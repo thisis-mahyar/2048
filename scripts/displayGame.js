@@ -24,11 +24,11 @@ function display(matrix) {
 }
 
 function displayTiles(matrix) {
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
-            document.querySelector(`.r${i} .c${j}`).textContent = matrix[i][j] === 0 ? '' : matrix[i][j]
-            document.querySelector(`.r${i} .c${j}`).style.color = 'white'
-            document.querySelector(`.r${i} .c${j}`).style.backgroundColor = matrix[i][j] === 0 ? '#ECECEC' : tileColors[matrix[i][j]]
+    for (let row = 0; row < matrix.length; row++) {
+        for (let col = 0; col < matrix[row].length; col++) {
+            document.querySelector(`.r${row} .c${col}`).textContent = matrix[row][col] === 0 ? '' : matrix[row][col]
+            document.querySelector(`.r${row} .c${col}`).style.color = 'white'
+            document.querySelector(`.r${row} .c${col}`).style.backgroundColor = matrix[row][col] === 0 ? '#ECECEC' : tileColors[matrix[row][col]]
         }
     }
 }

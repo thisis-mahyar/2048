@@ -1,9 +1,9 @@
 'use strict'
 
 function didWin(matrix) {
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
-            if (matrix[i][j] === 2048) {
+    for (let row = 0; row < matrix.length; row++) {
+        for (let col = 0; col < matrix[row].length; col++) {
+            if (matrix[row][col] === 2048) {
                 return true
             }
         }
@@ -13,13 +13,13 @@ function didWin(matrix) {
 }
 
 function didLose(matrix) {
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
-            let self = matrix[i][j]
-            let left = i > 0 ? matrix[i - 1][j] : -1
-            let right = i < matrix.length - 1 ? matrix[i + 1][j] : -1
-            let top = j > 0 ? matrix[i][j - 1] : -1
-            let down = j < matrix[i].length - 1 ? matrix[i][j + 1] : -1
+    for (let row = 0; row < matrix.length; row++) {
+        for (let col = 0; col < matrix[row].length; col++) {
+            let self = matrix[row][col]
+            let left = row > 0 ? matrix[row - 1][col] : -1
+            let right = row < matrix.length - 1 ? matrix[row + 1][col] : -1
+            let top = col > 0 ? matrix[row][col - 1] : -1
+            let down = col < matrix[row].length - 1 ? matrix[row][col + 1] : -1
 
             if (left === 0 || right === 0 || top === 0 || down === 0)
                 return false
