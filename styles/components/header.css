@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.game-title {
+    font-size: 96px;
+}
+
+.score-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+
+.score, .high-score {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    padding: 4px 12px;
+}

@@ -1,0 +1,16 @@
+table {
+    border: #2E2E2E solid 1px;
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+    padding: 4px;
+}
+
+td {
+    border-radius: 15px;
+    background-color: #ECECEC;
+    font-size: 28px;
+    text-align: center;
+    height: 25%;
+    width: 25%;
+}
