@@ -16,3 +16,5 @@ function revertHandler(matrix) {
         display(matrix)
     }
 }
+
+document.querySelector('.revert-icon').addEventListener('click', () => revertHandler(tiles))

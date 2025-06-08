@@ -8,3 +8,5 @@ function refreshHandler(matrix) {
     createNewTile(matrix)
     display(matrix)
 }
+
+document.querySelector('.refresh-icon').addEventListener('click', () => refreshHandler(tiles))
