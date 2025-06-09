@@ -1,7 +1,7 @@
 'use strict'
 
 function moveRight(matrix) {
-    updatePre(matrix)
+    updatePreviousState(matrix)
 
     for (let i = 0; i < matrix.length; i++) {
         matrix[i] = mergeRight(matrix[i])
@@ -12,7 +12,7 @@ function moveRight(matrix) {
 }
 
 function moveLeft(matrix) {
-    updatePre(matrix)
+    updatePreviousState(matrix)
 
     for (let i = 0; i < matrix.length; i++) {
         matrix[i] = mergeLeft(matrix[i])
@@ -23,7 +23,7 @@ function moveLeft(matrix) {
 }
 
 function moveUp(matrix) {
-    updatePre(matrix)
+    updatePreviousState(matrix)
 
     for (let col = 0; col < matrix.length; col++) {
         let column = [matrix[0][col], matrix[1][col], matrix[2][col], matrix[3][col]]
@@ -40,7 +40,7 @@ function moveUp(matrix) {
 }
 
 function moveDown(matrix) {
-    updatePre(matrix)
+    updatePreviousState(matrix)
 
     for (let col = 0; col < matrix.length; col++) {
         let column = [matrix[0][col], matrix[1][col], matrix[2][col], matrix[3][col]]

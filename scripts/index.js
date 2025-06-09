@@ -1,10 +1,10 @@
 'use strict'
 
 // only when the page loads, init the game
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', initGame);
 document.addEventListener('keydown', handleKeydown)
 
-function init() {
+function initGame() {
     createNewTile(tiles)
     display(tiles)
 }
@@ -31,12 +31,12 @@ function handleKeydown(e) {
     if (didWin(tiles)) {
         document.querySelector('.game-state').style.display = 'block'
         document.querySelector('.game-state').textContent = 'You win!'
-        window.removeEventListener('keydown', handleKeydown)
+        document.removeEventListener('keydown', handleKeydown)
     }
 
     if (didLose(tiles)) {
         document.querySelector('.game-state').style.display = 'block'
         document.querySelector('.game-state').textContent = 'You lose!'
-        window.removeEventListener('keydown', handleKeydown)
+        document.removeEventListener('keydown', handleKeydown)
     }
 }

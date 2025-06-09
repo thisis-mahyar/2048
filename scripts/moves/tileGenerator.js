@@ -21,7 +21,7 @@ function getEmptyTiles(matrix) {
 
 function createNewTile(matrix) {
     // prevent generating inappropriate numbers
-    if (pre.toString() !== matrix.toString()) {
+    if (previousState.toString() !== matrix.toString()) {
         let emptyTiles = getEmptyTiles(tiles)
 
         let random = Math.floor(Math.random() * emptyTiles.length)

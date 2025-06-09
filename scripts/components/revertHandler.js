@@ -8,11 +8,11 @@ function revertHandler(matrix) {
         // if you move, undo, move, undo, it won't return the right state
         for (let row = 0; row < matrix.length; row++) {
             for (let col = 0; col < matrix[row].length; col++) {
-                matrix[row][col] = pre[row][col]
+                matrix[row][col] = previousState[row][col]
             }
         }
 
-        pre.length = 0 // empty the array
+        previousState.length = 0 // empty the array
 
         canRevert = false
         display(matrix)
