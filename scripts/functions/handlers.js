@@ -1,7 +1,8 @@
 'use strict'
 
 import {data} from "../data.js"
-import {display} from "../displayGame.js"
+import {spawnTile} from "./spawner.js"
+import {displayGame} from "./display.js"
 
 export function revertHandler() {
     if (data.canRevert) {
@@ -16,8 +17,17 @@ export function revertHandler() {
         data.previousState.length = 0 // empty the array
 
         data.canRevert = false
-        display()
+        displayGame()
     }
 }
 
-document.querySelector('.revert-icon').addEventListener('click', revertHandler)
+export function refreshHandler() {
+    for (let row = 0; row < data.tiles.length; row++) {
+        for (let col = 0; col < data.tiles[row].length; col++) {
+            data.tiles[row][col] = 0
+        }
+    }
+
+    spawnTile()
+    displayGame()
+}

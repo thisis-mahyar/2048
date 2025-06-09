@@ -1,17 +1,21 @@
 'use strict'
 
-import {createNewTile} from "./moves/tileGenerator.js"
-import {display} from "./displayGame.js"
-import {moveDown, moveLeft, moveRight, moveUp} from "./moves/mainMoves.js"
-import {didLose, didWin} from "./states/gameStates.js"
+import {spawnTile} from "./functions/spawner.js"
+import {displayGame} from "./functions/display.js"
+import {moveDown, moveLeft, moveRight, moveUp} from "./functions/moves.js"
+import {didLose, didWin} from "./functions/states.js"
+import {refreshHandler, revertHandler} from "./functions/handlers.js"
 
 // only when the page loads, init the game
 document.addEventListener('DOMContentLoaded', initGame)
 document.addEventListener('keydown', handleKeydown)
 
+document.querySelector('.revert-icon').addEventListener('click', revertHandler)
+document.querySelector('.refresh-icon').addEventListener('click', refreshHandler)
+
 function initGame() {
-    createNewTile()
-    display()
+    spawnTile()
+    displayGame()
 }
 
 function handleKeydown(e) {

@@ -1,8 +1,8 @@
 'use strict'
 
-import {data} from "./data.js"
+import {data} from "../data.js"
 
-export function display() {
+export function displayGame() {
     displayTiles()
     displayScore()
 }

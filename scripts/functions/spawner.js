@@ -22,7 +22,7 @@ function getEmptyTiles() {
     return emptyTiles
 }
 
-export function createNewTile() {
+export function spawnTile() {
     // prevent generating inappropriate numbers
     if (data.previousState.toString() !== data.tiles.toString()) {
         let emptyTiles = getEmptyTiles()
