@@ -1,6 +1,12 @@
 'use strict'
 
-function moveRight() {
+import {updatePreviousState} from "../states/previousState.js"
+import {data} from "../data.js"
+import {mergeLeft, mergeRight} from "./rowMoves.js"
+import {createNewTile} from "./tileGenerator.js"
+import {display} from "../displayGame.js"
+
+export function moveRight() {
     updatePreviousState()
 
     for (let i = 0; i < data.tiles.length; i++) {
@@ -11,7 +17,7 @@ function moveRight() {
     display()
 }
 
-function moveLeft() {
+export function moveLeft() {
     updatePreviousState()
 
     for (let i = 0; i < data.tiles.length; i++) {
@@ -22,7 +28,7 @@ function moveLeft() {
     display()
 }
 
-function moveUp() {
+export function moveUp() {
     updatePreviousState()
 
     for (let col = 0; col < data.tiles.length; col++) {
@@ -30,7 +36,7 @@ function moveUp() {
 
         column = mergeLeft(column)
 
-        for (let row = 0; row < data.tiles[col].length; row++)  {
+        for (let row = 0; row < data.tiles[col].length; row++) {
             data.tiles[row][col] = column[row]
         }
     }
@@ -39,7 +45,7 @@ function moveUp() {
     display()
 }
 
-function moveDown() {
+export function moveDown() {
     updatePreviousState()
 
     for (let col = 0; col < data.tiles.length; col++) {

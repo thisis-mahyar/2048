@@ -1,6 +1,9 @@
 'use strict'
 
-function revertHandler() {
+import {data} from "../data.js"
+import {display} from "../displayGame.js"
+
+export function revertHandler() {
     if (data.canRevert) {
         // somehow, using map() doesn't work properly here
         // if you move, undo, move, undo, it won't return the right state

@@ -1,6 +1,8 @@
 'use strict'
 
-function updatePreviousState() {
+import {data} from "../data.js"
+
+export function updatePreviousState() {
     if (data.previousState.length === 0) {
         data.previousState = [[], [], [], []]
     }

@@ -1,6 +1,8 @@
 'use strict'
 
-function display() {
+import {data} from "./data.js"
+
+export function display() {
     displayTiles()
     displayScore()
 }

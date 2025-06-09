@@ -1,5 +1,7 @@
 'use strict'
 
+import {data} from "../data.js"
+
 // two approaches to choose a random tile among empty tiles
 // 1. choose a random tile, if it is empty, create a new number there
 // 2. store all the empty tiles in an array, choose a random one and create a new number in it
@@ -11,15 +13,16 @@ function getEmptyTiles() {
 
     for (let row = 0; row < data.tiles.length; row++) {
         for (let col = 0; col < data.tiles[row].length; col++) {
-            if (data.tiles[row][col] === 0)
+            if (data.tiles[row][col] === 0) {
                 emptyTiles.push({row: row, col: col})
+            }
         }
     }
 
     return emptyTiles
 }
 
-function createNewTile() {
+export function createNewTile() {
     // prevent generating inappropriate numbers
     if (data.previousState.toString() !== data.tiles.toString()) {
         let emptyTiles = getEmptyTiles()

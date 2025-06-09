@@ -1,4 +1,5 @@
 'use strict'
+import {data} from "../data.js"
 
 // [0, 2, 8, 0] => [0, 0, 2, 8]
 function shiftRight(row) {
@@ -9,7 +10,7 @@ function shiftRight(row) {
     return new Array(zeroCount).fill(0).concat(nonZeroItems)
 }
 
-function mergeRight(row) {
+export function mergeRight(row) {
     // if there are zeros between non-zeros
     // [2, 0, 0, 2] => [0, 0, 2, 2]
     row = shiftRight(row)
@@ -36,7 +37,7 @@ function mergeRight(row) {
     return row
 }
 
-function mergeLeft(row) {
+export function mergeLeft(row) {
     row.reverse()
     row = mergeRight(row)
     row.reverse()

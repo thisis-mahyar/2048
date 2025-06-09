@@ -1,7 +1,12 @@
 'use strict'
 
+import {createNewTile} from "./moves/tileGenerator.js"
+import {display} from "./displayGame.js"
+import {moveDown, moveLeft, moveRight, moveUp} from "./moves/mainMoves.js"
+import {didLose, didWin} from "./states/gameStates.js"
+
 // only when the page loads, init the game
-document.addEventListener('DOMContentLoaded', initGame);
+document.addEventListener('DOMContentLoaded', initGame)
 document.addEventListener('keydown', handleKeydown)
 
 function initGame() {

@@ -1,4 +1,4 @@
-const data = {
+export const data = {
     tiles: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
     previousState: [],
     tileColors: {
