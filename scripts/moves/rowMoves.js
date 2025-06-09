@@ -22,7 +22,7 @@ function mergeRight(row) {
             row[i - 1] = 0
 
             // update score
-            score += row[i]
+            data.score += row[i]
 
             // skip the next element to avoid double merging
             i--

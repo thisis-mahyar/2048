@@ -1,14 +1,14 @@
 'use strict'
 
 function updatePreviousState() {
-    if (previousState.length === 0) {
-        previousState = [[], [], [], []]
+    if (data.previousState.length === 0) {
+        data.previousState = [[], [], [], []]
     }
 
-    if (previousState.length === 0 || previousState.toString() !== tiles.toString()) {
-        for (let row = 0; row < tiles.length; row++) {
-            for (let col = 0; col < tiles[row].length; col++) {
-                previousState[row][col] = tiles[row][col]
+    if (data.previousState.length === 0 || data.previousState.toString() !== data.tiles.toString()) {
+        for (let row = 0; row < data.tiles.length; row++) {
+            for (let col = 0; col < data.tiles[row].length; col++) {
+                data.previousState[row][col] = data.tiles[row][col]
             }
         }
     }

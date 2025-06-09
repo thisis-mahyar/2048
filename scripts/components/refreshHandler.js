@@ -1,9 +1,9 @@
 'use strict'
 
 function refreshHandler() {
-    for (let row = 0; row < tiles.length; row++) {
-        for (let col = 0; col < tiles[row].length; col++) {
-            tiles[row][col] = 0
+    for (let row = 0; row < data.tiles.length; row++) {
+        for (let col = 0; col < data.tiles[row].length; col++) {
+            data.tiles[row][col] = 0
         }
     }
 

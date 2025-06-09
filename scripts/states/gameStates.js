@@ -1,9 +1,9 @@
 'use strict'
 
 function didWin() {
-    for (let row = 0; row < tiles.length; row++) {
-        for (let col = 0; col < tiles[row].length; col++) {
-            if (tiles[row][col] === 2048) {
+    for (let row = 0; row < data.tiles.length; row++) {
+        for (let col = 0; col < data.tiles[row].length; col++) {
+            if (data.tiles[row][col] === 2048) {
                 return true
             }
         }
@@ -13,13 +13,13 @@ function didWin() {
 }
 
 function didLose() {
-    for (let row = 0; row < tiles.length; row++) {
-        for (let col = 0; col < tiles[row].length; col++) {
-            let self = tiles[row][col]
-            let left = row > 0 ? tiles[row - 1][col] : -1
-            let right = row < tiles.length - 1 ? tiles[row + 1][col] : -1
-            let top = col > 0 ? tiles[row][col - 1] : -1
-            let down = col < tiles[row].length - 1 ? tiles[row][col + 1] : -1
+    for (let row = 0; row < data.tiles.length; row++) {
+        for (let col = 0; col < data.tiles[row].length; col++) {
+            let self = data.tiles[row][col]
+            let left = row > 0 ? data.tiles[row - 1][col] : -1
+            let right = row < data.tiles.length - 1 ? data.tiles[row + 1][col] : -1
+            let top = col > 0 ? data.tiles[row][col - 1] : -1
+            let down = col < data.tiles[row].length - 1 ? data.tiles[row][col + 1] : -1
 
             if (left === 0 || right === 0 || top === 0 || down === 0)
                 return false

@@ -3,8 +3,8 @@
 function moveRight() {
     updatePreviousState()
 
-    for (let i = 0; i < tiles.length; i++) {
-        tiles[i] = mergeRight(tiles[i])
+    for (let i = 0; i < data.tiles.length; i++) {
+        data.tiles[i] = mergeRight(data.tiles[i])
     }
 
     createNewTile()
@@ -14,8 +14,8 @@ function moveRight() {
 function moveLeft() {
     updatePreviousState()
 
-    for (let i = 0; i < tiles.length; i++) {
-        tiles[i] = mergeLeft(tiles[i])
+    for (let i = 0; i < data.tiles.length; i++) {
+        data.tiles[i] = mergeLeft(data.tiles[i])
     }
 
     createNewTile()
@@ -25,13 +25,13 @@ function moveLeft() {
 function moveUp() {
     updatePreviousState()
 
-    for (let col = 0; col < tiles.length; col++) {
-        let column = [tiles[0][col], tiles[1][col], tiles[2][col], tiles[3][col]]
+    for (let col = 0; col < data.tiles.length; col++) {
+        let column = [data.tiles[0][col], data.tiles[1][col], data.tiles[2][col], data.tiles[3][col]]
 
         column = mergeLeft(column)
 
-        for (let row = 0; row < tiles[col].length; row++)  {
-            tiles[row][col] = column[row]
+        for (let row = 0; row < data.tiles[col].length; row++)  {
+            data.tiles[row][col] = column[row]
         }
     }
 
@@ -42,13 +42,13 @@ function moveUp() {
 function moveDown() {
     updatePreviousState()
 
-    for (let col = 0; col < tiles.length; col++) {
-        let column = [tiles[0][col], tiles[1][col], tiles[2][col], tiles[3][col]]
+    for (let col = 0; col < data.tiles.length; col++) {
+        let column = [data.tiles[0][col], data.tiles[1][col], data.tiles[2][col], data.tiles[3][col]]
 
         column = mergeRight(column)
 
-        for (let row = 0; row < tiles[col].length; row++) {
-            tiles[row][col] = column[row]
+        for (let row = 0; row < data.tiles[col].length; row++) {
+            data.tiles[row][col] = column[row]
         }
     }
 

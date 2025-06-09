@@ -6,15 +6,15 @@ function display() {
 }
 
 function displayTiles() {
-    for (let row = 0; row < tiles.length; row++) {
-        for (let col = 0; col < tiles[row].length; col++) {
-            document.querySelector(`.r${row} .c${col}`).textContent = tiles[row][col] === 0 ? '' : tiles[row][col]
+    for (let row = 0; row < data.tiles.length; row++) {
+        for (let col = 0; col < data.tiles[row].length; col++) {
+            document.querySelector(`.r${row} .c${col}`).textContent = data.tiles[row][col] === 0 ? '' : data.tiles[row][col]
             document.querySelector(`.r${row} .c${col}`).style.color = 'white'
-            document.querySelector(`.r${row} .c${col}`).style.backgroundColor = tiles[row][col] === 0 ? '#ECECEC' : tileColors[tiles[row][col]]
+            document.querySelector(`.r${row} .c${col}`).style.backgroundColor = data.tiles[row][col] === 0 ? '#ECECEC' : data.tileColors[data.tiles[row][col]]
         }
     }
 }
 
 function displayScore() {
-    document.querySelector('.score-val').innerHTML = score.toString()
+    document.querySelector('.score-val').innerHTML = data.score.toString()
 }
