@@ -18,17 +18,17 @@ const tileColors = {
     8192: '#47B5FF'
 }
 
-function display(matrix) {
-    displayTiles(matrix)
+function display() {
+    displayTiles()
     displayScore()
 }
 
-function displayTiles(matrix) {
-    for (let row = 0; row < matrix.length; row++) {
-        for (let col = 0; col < matrix[row].length; col++) {
-            document.querySelector(`.r${row} .c${col}`).textContent = matrix[row][col] === 0 ? '' : matrix[row][col]
+function displayTiles() {
+    for (let row = 0; row < tiles.length; row++) {
+        for (let col = 0; col < tiles[row].length; col++) {
+            document.querySelector(`.r${row} .c${col}`).textContent = tiles[row][col] === 0 ? '' : tiles[row][col]
             document.querySelector(`.r${row} .c${col}`).style.color = 'white'
-            document.querySelector(`.r${row} .c${col}`).style.backgroundColor = matrix[row][col] === 0 ? '#ECECEC' : tileColors[matrix[row][col]]
+            document.querySelector(`.r${row} .c${col}`).style.backgroundColor = tiles[row][col] === 0 ? '#ECECEC' : tileColors[tiles[row][col]]
         }
     }
 }
