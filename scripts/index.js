@@ -1,40 +1,51 @@
-// only when the page loads, init the game
-window.addEventListener('load', init)
-window.addEventListener('keydown', handleKeydown)
+'use strict'
 
-function init() {
-    createNewTile(tiles)
-    display(tiles)
+import {spawnTile} from "./functions/spawner.js"
+import {displayGame} from "./functions/display.js"
+import {moveDown, moveLeft, moveRight, moveUp} from "./functions/moves.js"
+import {didLose, didWin} from "./functions/states.js"
+import {refreshHandler, revertHandler} from "./functions/handlers.js"
+
+// only when the page loads, init the game
+document.addEventListener('DOMContentLoaded', initGame)
+document.addEventListener('keydown', handleKeydown)
+
+document.querySelector('.revert-icon').addEventListener('click', revertHandler)
+document.querySelector('.refresh-icon').addEventListener('click', refreshHandler)
+
+function initGame() {
+    spawnTile()
+    displayGame()
 }
 
 function handleKeydown(e) {
     switch (e.key) {
         case 'ArrowRight':
-            moveRight(tiles)
+            moveRight()
             break
 
         case 'ArrowLeft':
-            moveLeft(tiles)
+            moveLeft()
             break
 
         case 'ArrowUp':
-            moveUp(tiles)
+            moveUp()
             break
 
         case 'ArrowDown':
-            moveDown(tiles)
+            moveDown()
             break
     }
 
-    if (didWin(tiles)) {
+    if (didWin()) {
         document.querySelector('.game-state').style.display = 'block'
         document.querySelector('.game-state').textContent = 'You win!'
-        window.removeEventListener('keydown', handleKeydown)
+        document.removeEventListener('keydown', handleKeydown)
     }
 
-    if (didLose(tiles)) {
+    if (didLose()) {
         document.querySelector('.game-state').style.display = 'block'
         document.querySelector('.game-state').textContent = 'You lose!'
-        window.removeEventListener('keydown', handleKeydown)
+        document.removeEventListener('keydown', handleKeydown)
     }
 }
