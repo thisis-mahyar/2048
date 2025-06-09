@@ -1,7 +1,5 @@
 'use strict'
 
-let canRevert = false
-
 function revertHandler() {
     if (canRevert) {
         // somehow, using map() doesn't work properly here

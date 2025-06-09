@@ -1,7 +1,5 @@
 'use strict'
 
-let previousState = []
-
 function updatePreviousState() {
     if (previousState.length === 0) {
         previousState = [[], [], [], []]
